@@ -1,0 +1,12 @@
+깃허브 처음세팅
+git init
+git remote add origin 주소
+
+깃허브에서 가져올때
+git pull origin master
+
+깃허브에서 파일 푸시할때
+
+git add .
+git commit -m "메모사항"
+git push origin master
