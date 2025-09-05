@@ -1,17 +1,44 @@
 import { useEffect, useState } from "react";
 import { Col, Row, RowWrap, Wrappers } from "../components/styled-components";
 import axios from "axios";
+import styled from "styled-components";
 
 const Home = () => {
   const default_list = [
-    <img src="bscompany2.png"></img>,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11, //창 크기에 따라 ul가 변경되게
+    <img
+      src="bscompany2.png"
+      alt="bscompany"
+      style={{
+        width: "600px",
+        height: "400px",
+        display: "block",
+        margin: "0 auto",
+      }}
+    />,
+    <h2
+      style={{
+        marginLeft: "-215px",
+      }}
+    >
+      인기있는 상품 🔥
+    </h2>,
+    "셔츠",
+    <h2
+      style={{
+        marginLeft: "-270px",
+      }}
+    >
+      # Top
+    </h2>,
+    "후드",
+    <h2
+      style={{
+        marginLeft: "-270px",
+      }}
+    >
+      # Acc
+    </h2>,
+    "백",
   ];
   const [list, setList] = useState(default_list);
   const [homeContent, setHomeContent] = useState({});
@@ -34,13 +61,14 @@ const Home = () => {
   return (
     <>
       <Wrappers>
-        <Col style={{}}>
+        <Col>
           {list.map((el, idx) => {
             return (
               <div
                 style={{
-                  width: "50%",
-                  margin: "0 auto",
+                  width: "100%",
+                  margin: "0",
+                  paddingTop: "0 0 10px",
                   textAlign: "center",
                 }}
               >

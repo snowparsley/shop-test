@@ -6,14 +6,17 @@ const BottomMenuContainer = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 600px; /* 고정 폭 */
+  max-width: 100%; /* 화면이 1200px보다 작으면 화면 폭에 맞춤 */
   display: flex;
   justify-content: center; /* 아이콘 사이 간격 */
   align-items: center;
   z-index: 1000;
   height: 50px;
+
   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1), -3px 0 6px rgba(0, 0, 0, 0.1),
     3px 0 6px rgba(0, 0, 0, 0.1);
+
   i {
     font-size: 17px;
     margin: 30px;
@@ -33,13 +36,13 @@ const BottomMenu = () => {
         }}
       >
         <li>
-          <i class="fa-solid fa-basket-shopping"></i>
+          <i className="fa-solid fa-basket-shopping"></i>
         </li>
         <li>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i className="fa-solid fa-cart-shopping"></i>
         </li>
         <li>
-          <i class="fa-regular fa-user"></i>
+          <i className="fa-regular fa-user"></i>
         </li>
       </ul>
     </BottomMenuContainer>

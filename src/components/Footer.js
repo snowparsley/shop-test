@@ -3,24 +3,23 @@ import styled from "styled-components";
 const FooterContainer = styled.footer`
   background: rgb(246, 246, 246); /* 배경색 */
   color: black;
-  width: 50%;
+  width: 600px; /* 고정 폭 */
+  max-width: 100%; /* 화면이 1200px보다 작으면 화면 폭에 맞춤 */
   margin: 0 auto;
-  padding: 10px 0px 70px;
+  padding: 20px 0;
   font-size: 11px;
   font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 0.3;
+  line-height: 1.2;
+
   h6 {
     color: rgba(141, 133, 133, 1);
+    margin-top: 5%;
   }
+
   h3,
   h5,
   h6 {
     padding-left: 10px;
-  }
-
-  ,
-  h6 {
-    margin-top: 5%;
   }
 `;
 

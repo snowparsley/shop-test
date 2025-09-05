@@ -12,9 +12,12 @@ export const Col = styled.div`
   flex-direction: column;
 `;
 export const Wrappers = styled.div`
-  margin-top: 21px;
+  h2 {
+    width: 100%;
+  }
 `;
 export const Logo = styled.img`
-  width: 120px;
-  height: auto;
+  height: 40px;
+  width: auto;
+  cursor: pointer;
 `;
