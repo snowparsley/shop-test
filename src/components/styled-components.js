@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
 export const Row = styled.div`
-display: flex;
-`
+  display: flex;
+`;
 export const RowWrap = styled.div`
-display: flex;
-flex-wrap: wrap;
-`
+  display: flex;
+  flex-wrap: wrap;
+`;
 export const Col = styled.div`
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 export const Wrappers = styled.div`
-margin-top: 21px;
-`
+  margin-top: 21px;
+`;
+export const Logo = styled.img`
+  width: 120px;
+  height: auto;
+`;
