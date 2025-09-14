@@ -1,29 +1,26 @@
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Wrappers } from "../components/styled-components";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
 const Product = () => {
-  const params = useParams();
-  const [item, setItem] = useState({});
-  useEffect(() => {
-    getitem();
-  }, []);
-  const getitem = async () => {
-    try {
-      let { data: response } = await axios.get(
-        `/api/shop/product/${params.id}/?id=${params.id}&brand_id=12&root_id=1`
-      );
-      console.log(response);
-      setItem(response.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const location = useLocation();
+  const item = location.state?.item;
+
+  if (!item) return <Wrappers>로딩 중...</Wrappers>;
+
   return (
-    <>
-      <Wrappers>{item.product_name}</Wrappers>
-    </>
+    <Wrappers>
+      <h2>{item.product_name}</h2>
+      <p>가격: {item.product_price?.toLocaleString()}원</p>
+      <p>할인가: {item.product_sale_price?.toLocaleString()}원</p>
+      {item.image_url && (
+        <img
+          src={item.image_url}
+          alt={item.product_name}
+          style={{ width: "400px", marginTop: "10px" }}
+        />
+      )}
+    </Wrappers>
   );
 };
+
 export default Product;

@@ -5,7 +5,8 @@ const HeaderContainer = styled.header`
   background: white;
   position: sticky; /* 스크롤 시 상단에 붙음 */
   top: 0;
-  width: 600px; /* 고정 폭 */
+  width: 100%; /* 화면 폭에 맞게 늘어나도록 */
+  max-width: 730px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -14,8 +15,9 @@ const HeaderContainer = styled.header`
   z-index: 1000;
 
   i {
-    margin: 0 10px;
+    padding: 0 10px;
     font-size: 20px; /* 아이콘 크기 고정 */
+    cursor: pointer;
   }
 
   img {
@@ -34,6 +36,7 @@ const Header = () => {
           width: "140px",
         }}
       />
+
       <i className="fa-solid fa-magnifying-glass"></i>
     </HeaderContainer>
   );

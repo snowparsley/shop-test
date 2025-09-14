@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FooterContainer = styled.footer`
   background: rgb(246, 246, 246); /* 배경색 */
   color: black;
-  width: 600px; /* 고정 폭 */
+  width: 700px; /* 고정 폭 */
   max-width: 100%; /* 화면이 1200px보다 작으면 화면 폭에 맞춤 */
   margin: 0 auto;
   padding: 20px 0;

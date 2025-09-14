@@ -6,7 +6,7 @@ const BottomMenuContainer = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px; /* 고정 폭 */
+  width: 700px; /* 고정 폭 */
   max-width: 100%; /* 화면이 1200px보다 작으면 화면 폭에 맞춤 */
   display: flex;
   justify-content: center; /* 아이콘 사이 간격 */
@@ -20,6 +20,7 @@ const BottomMenuContainer = styled.div`
   i {
     font-size: 17px;
     margin: 30px;
+    cursor: pointer;
   }
 `;
 
