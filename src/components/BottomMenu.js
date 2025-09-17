@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const BottomMenuContainer = styled.div`
@@ -25,6 +26,13 @@ const BottomMenuContainer = styled.div`
 `;
 
 const BottomMenu = () => {
+  const navigate = useNavigate();
+
+  const gohome = () => {
+    navigate("/");
+    window.scrollTo({ top: 0 });
+  };
+
   return (
     <BottomMenuContainer>
       <ul
@@ -37,13 +45,19 @@ const BottomMenu = () => {
         }}
       >
         <li>
-          <i className="fa-solid fa-basket-shopping"></i>
+          <i className="fa-solid fa-basket-shopping" onClick={gohome}></i>
         </li>
         <li>
-          <i className="fa-solid fa-cart-shopping"></i>
+          <i
+            className="fa-solid fa-cart-shopping"
+            onClick={() => navigate("/cart")}
+          ></i>
         </li>
         <li>
-          <i className="fa-regular fa-user"></i>
+          <i
+            className="fa-regular fa-user"
+            onClick={() => navigate("/mypage")}
+          ></i>
         </li>
       </ul>
     </BottomMenuContainer>

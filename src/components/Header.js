@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "./styled-components";
+import { useNavigate } from "react-router-dom"; // ✅ 추가
 
 const HeaderContainer = styled.header`
   background: white;
@@ -27,16 +28,23 @@ const HeaderContainer = styled.header`
 `;
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const gohome = () => {
+    navigate("/");
+    window.scrollTo({ top: 0 }); // 최상단으로 스크롤
+  };
   return (
     <HeaderContainer>
       <Logo
-        src="bscompany.png"
+        src="bscompany.jpg"
         alt="logo"
         style={{
           width: "140px",
+          cursor: "pointer",
         }}
+        onClick={gohome}
       />
-
       <i className="fa-solid fa-magnifying-glass"></i>
     </HeaderContainer>
   );
