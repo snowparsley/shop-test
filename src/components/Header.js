@@ -45,7 +45,7 @@ const Header = () => {
         }}
         onClick={gohome}
       />
-      <i className="fa-solid fa-magnifying-glass"></i>
+      <i className="fa-solid fa-magnifying-glass" onClick={gohome}></i>
     </HeaderContainer>
   );
 };
