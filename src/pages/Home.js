@@ -24,6 +24,7 @@ const Home = () => {
       id: 3,
       product_name: "[수플샵] 닥터라인 헤모키즈&징크키즈",
       product_price: 21000,
+      product_sale_price: 32000,
       image_url: "item3.jpg",
     },
     {
