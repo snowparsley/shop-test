@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "./styled-components";
-import { useNavigate } from "react-router-dom"; // ✅ 추가
+import { useNavigate } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   background: white;

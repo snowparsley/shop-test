@@ -98,7 +98,7 @@ const Home = () => {
     infinite: true, // 마지막에서 다시 처음으로
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     draggable: true, // 드래그로 넘기기
     autoplay: false, // 자동재생
   };
@@ -121,6 +121,7 @@ const Home = () => {
               src={item.image_url}
               alt={item.product_name}
               style={{
+                cursor: "pointer",
                 width: "100%",
                 height: "200px",
                 objectFit: "cover",
