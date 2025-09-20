@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <img src="/bscompany.jpg" alt="bscompany" onClick={gohome} />
+        <img src="/logo.jpg" alt="logo" onClick={gohome} />
         <i
           className="fa-solid fa-magnifying-glass"
           onClick={() => setShowSearch(!showSearch)}
